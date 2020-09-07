@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+    <head lang="en">
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width initial-scale=1.0">
+        <title>Organiser</title>
+        <link rel="stylesheet" href="./styles.css" type="text/css">
+    </head>
+    <body>
+        <!-- Title -->
+        <div class="title">
+            <h1>Organiser</h1>
+        </div>
+        <!-- drag container -->
+        <div class="drag-container">
+            <!-- drag container elements -->
+            <ul class="drag-container-elements">
+                <!-- list container -->
+                <div class="list-container todo-container">
+                    <span class="list-container-title todo">Todo-list</span>
+                    <!-- list items -->
+                    <div class="list-items custom-scroll" id="todo-list" ondrop="drop(event)" ondragover="allowDrop(event)" ondragenter="dragEnter(0)"></div>
+                    <!-- Add button grps -->
+                    <div class="bottom">
+                        <div class="buttons">
+                            <div class="add-btn" onclick="showInputBox(0)">
+                                <span class="plus-sign">+</span>
+                                <span>Add Item</span>
+                            </div>
+                            <div class="add-btn solid" onclick="hideInputBox(0)">
+                                <span>Save Item</span>
+                            </div>
+                        </div> 
+                        <div class="add-item-container">
+                            <div class="add-item" contenteditable="true"></div>
+                        </div>
+                    </div>  
+                </div>
+            </ul>
+            <!-- drag container elements -->
+            <ul class="drag-container-elements">
+                <!-- list container -->
+                <div class="list-container progress-container">
+                    <span class="list-container-title progress">Progress</span>
+                    <!-- list items -->
+                    <div class="list-items custom-scroll" id="progress-list" ondrop="drop(event)" ondragover="allowDrop(event)" ondragenter="dragEnter(1)"></div>
+                    <!-- Add button grps -->
+                    <div class="bottom">
+                        <div class="buttons">
+                            <div class="add-btn" onclick="showInputBox(1)">
+                                <span class="plus-sign">+</span>
+                                <span>Add Item</span>
+                            </div>
+                            <div class="add-btn solid" onclick="hideInputBox(1)">
+                                <span>Save Item</span>
+                            </div>
+                        </div> 
+                        <div class="add-item-container">
+                            <div class="add-item" contenteditable="true"></div>
+                        </div>
+                    </div>
+                </div>
+            </ul>
+            <!-- drag container elements -->
+            <ul class="drag-container-elements">
+                <!-- list container -->
+                <div class="list-container completed-container">
+                    <span class="list-container-title completed">Completed</span>
+                    <!-- list items -->
+                    <div class="list-items custom-scroll"  id="completed-list" ondrop="drop(event)" ondragover="allowDrop(event)" ondragenter="dragEnter(2)" ></div>
+                    <!-- Add button grps -->
+                    <div class="bottom">
+                        <div class="buttons">
+                            <div class="add-btn" onclick="showInputBox(2)">
+                                <span class="plus-sign">+</span>
+                                <span>Add Item</span>
+                            </div>
+                            <div class="add-btn solid" onclick="hideInputBox(2)">
+                                <span>Save Item</span>
+                            </div>
+                        </div> 
+                        <div class="add-item-container">
+                            <div class="add-item" contenteditable="true"></div>
+                        </div>
+                    </div>
+                </div>
+            </ul>
+        </div>
+        <!-- script -->
+        <script type="text/javascript" src="./scripts.js"></script>
+    </body>
+</html>
